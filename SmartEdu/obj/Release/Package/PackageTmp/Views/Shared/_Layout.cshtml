@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>01 | Adana Özel Ders</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="@Url.Content("~/Content/Site/css/CountDown.css")" rel="stylesheet" />
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Site/images/favicon.ico")" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="@Url.Content("~/Content/Site/images/apple-touch-icon.png")">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/bootstrap.min.css")">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/style.css")">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/versions.css")">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/responsive.css")">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/custom.css")">
+    <!-- Modernizer for Portfolio -->
+    <script src="@Url.Content("~/Content/Site/js/modernizer.js")"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="host_version">
+   
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+    
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="@Url.Content("~/Content/Site/images/logo.png")" alt="" />
+                </a>
+
+                <button class="navbar-toggler collapsed" aria-expanded="false" aria-controls="navbars-rs-food" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbars-host">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbars-host">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="/">Anasayfa</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/Hakkimizda">Hakkımızda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/İletisim">İletişim</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=905432951716&text=Özel%20ders%20talebinde%20bulunmak%20istiyorum." target="_blank"><img src="@Url.Content("~/Content/Site/images/Whatsapp-icon.png")" title="Whatsappla Ulaşın" class="float"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+
+    
+        @RenderBody()
+    
+
+    <!--Start Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix ">
+                        <div class="widget-title">
+                            <h3>Bizi Takip Edin</h3>
+                        </div>
+                        <br />
+                            <ul class="footer-links-soi ">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+
+                            </ul><!-- end links -->
+                        
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Bağlantılar</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="/">Anasayfa</a></li>
+                            <li><a href="/Hakkimizda">Hakkımızda </a></li>
+                            <li><a href="/İletisim">İletişim</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>İletişim</h3>
+                        </div>
+                        <ul class="footer-links">
+
+                            <li>İdeal Özel Eğitim Kurumları</li>
+                            <li>Küçüksaat Fatih Plaza Kat:2 Seyhan/ADANA</li>
+                            <li><a class="btn btn-primary" href="">+90 5** *** ** **</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+            </div><!-- end row -->
+
+        </div>
+    </footer>
+    <!-- end footer -->
+
+   <!--Copyrights--> 
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">
+                    <p class="footer-company-name">Tüm Hakları Saklıdır. &copy; 2019 <a href="http://umsayazilim.com/" target="_blank">UMSA YAZILIM</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end copyrights -->
+    
+        <!-- Yukarı Çıkma Butonu -->
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- Tüm JavaScript Dosyaları -->
+    @*<script src="@Url.Content("~/Scripts/jquery-3.0.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-3.0.0.js")"></script>*@
+    <script src="@Url.Content("~/Content/Site/js/all.js")"></script>
+   
+    <!-- Tüm Eklentiler -->
+    <script src="@Url.Content("~/Content/Site/js/custom.js")"></script>
+    <script src="@Url.Content("~/Content/Site/js/timeline.min.js")"></script>
+    <script src="@Url.Content("~/Content/Site/js/countdown.js")"></script>
+    
+    <script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+    </script>
+    
+    
+</body>
+</html>

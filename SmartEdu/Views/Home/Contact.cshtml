@@ -1,0 +1,62 @@
+﻿@using  SmartEdu.Models.ViewModels
+@model IletisimModel
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="all-title-box">
+    <center> <img style="background-repeat:no-repeat; max-width:100%; height:680px; padding:10px" src="@Model.VmImage.FirstOrDefault(x=>x.Type ==6).ImagePath" /></center>
+    </div>
+
+<br />
+<div class="col-md-12 col-xs-12">
+    <div class="message-box" div align="center">
+        <a href="@Model.VmIletisim.FirstOrDefault(x=>x.IletisimId == 1).Telefon" target="_blank" class="hover-btn-new green">
+            <span>İletişim:(0532)-698-02-34</span>
+        </a>
+    </div>
+</div>
+
+<div class="section wb" id="contact">
+    <div class="container">
+        <div class="section-title text-center">
+            @Html.Raw(Model.model.PostTitle)
+
+                @Html.Raw(Model.model.PostContent)
+        </div><!-- end title -->
+        @{ var whatsappng = Model.VmImage.FirstOrDefault(x => x.ImageId == 17); }
+        @foreach (var item in Model.VmIletisim.Where(x=> x.IletisimId ==1))
+        {
+            string telefon = item.Telefon.Replace("tel://+9", "");
+
+            <div class="row">
+
+                <div class="col-xl-6 col-md-12 col-sm-12">
+                    <iframe src=@item.Harita width=100% height="450" frameborder="1" style="border:1.5px solid; border-color:brown" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-xl-6 col-md-12 col-sm-12" >
+                    <h2 style="font-size:40px; color:black; text-align:center"> Bize Ulaşın </h2>
+                    <hr style="border:1.7px dashed;" />
+                    <br />
+                    <address>
+                        Kurum : <strong><u>Özel İdeal Eğitim Kurumları</u></strong><br />
+                        Adres : <h3>@Html.Raw(item.Adres)</h3>
+                        Telefon : <a href=@item.Telefon title="telefon"> @telefon</a>
+                        <br/>
+                         <br/>
+                        Whatsapp :
+                        <a href=@item.Whatsapp target="_blank"><img src="@Url.Content("~/Content/Site/images/Whatsapp-icon.png")" title="Whatsappla Ulaşın" class="float"></a>
+                    </address>
+                </div><!-- end col -->
+
+            </div> <!-- end row -->
+            break;
+        } 
+        <br />
+    </div><!-- end container -->
+</div>
+
+

@@ -1,0 +1,289 @@
+﻿@model SmartEdu.Models.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/Site/css/style.css" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Site/css/sayac.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Site/css/timeline.min.css")" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Site/engine1/style.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Content/Site/engine1/jquery.js")"></script>
+    <!-- End WOWSlider.com HEAD section -->
+</head>
+
+<!--Slider Start-->
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            @foreach (var resim in Model.VmImage.Where(x => x.Type == 1))
+            {
+                <li><img src="@Url.Content(resim.ImagePath)" alt="Adana özel ders" id="@resim.Class" /></li>
+
+            }
+        </ul>
+    </div>
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title=""><span>1</span></a>
+            <a href="#" title=""><span>2</span></a>
+            <a href="#" title=""><span>3</span></a>
+            <a href="#" title=""><span>4</span></a>
+        </div>
+    </div>
+
+    <div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="@Url.Content("~/Content/Site/engine1/wowslider.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/Site/engine1/script.js")"></script>
+<!--Slider Finish-->
+
+<br />
+<div class="col-md-12 col-xs-12">
+    <div class="message-box" div align="center">
+        <a href="@Model.VmIletisim.FirstOrDefault(x=> x.IletisimId==1).Telefon" target="_blank" class="hover-btn-new orange">
+            <span>İletişim: (0532)-698-02-34</span>
+        </a>
+    </div>
+</div>
+@{ var ozelders = Model.VmPosts.FirstOrDefault(x => x.PostId == 14);
+
+    string ozelderstitle = ozelders.PostTitle;
+    string ozelderscontent = ozelders.PostContent;
+}
+<div id="overviews" class="section wb">
+    <div class="container">
+        <div class="section-title row text-center">
+            <div class="col-md-8 offset-md-2">
+                <h3>@Html.Raw(ozelderstitle)</h3>
+                @Html.Raw(ozelderscontent)
+            </div>
+        </div><!-- end title -->
+        <div class="row align-items-center">
+            @foreach (var post in Model.VmPosts.Where(x => x.Type == 1))
+            {
+                var imagePath = Model.VmImage.FirstOrDefault(y => y.ImageId == post.ImageId);
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <u><h4>01 Özel Ders</h4></u>
+                        <h2>@post.PostTitle</h2>
+                        @Html.Raw(post.PostContent)
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <img class="img-fluid img-rounded" alt="" src="@Url.Content(imagePath.ImagePath)" />
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            }
+        </div><!--End Row-->
+    </div><!-- end container -->
+</div><!-- end section -->
+<!-- Whatsapp Butonu-->
+<!--Sayaclar-->
+<section id="featured" class="section-padding pb-70">
+    <div class="container" style="padding-bottom:25px">
+        <div class="row" style="display:flex; margin-left:-20px;
+ margin-right:-20px">
+
+            <div class=" col-md-4" style="text-align: center;
+	background: #289b95;
+font-family: sans-serif;
+font-weight: 100;
+border-radius:60px;">
+                <h1>TYT Sınavına Kalan Süre</h1>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days" id="day1"></span>
+                        <div class="smalltext">Gün</div>
+                    </div>
+                    <div>
+                        <span class="hours" id="hour1"></span>
+                        <div class="smalltext">Saat</div>
+                    </div>
+                    <div>
+                        <span class="minutes" id="minute1"></span>
+                        <div class="smalltext">Dakika</div>
+                    </div>
+                    <div>
+                        <span class="seconds" id="second1"></span>
+                        <div class="smalltext">Saniye</div>
+                    </div>
+                </div>
+                <p id="demo1"></p>
+            </div>
+            <div class=" col-md-4" style="text-align: center;
+	background: #289b95;
+font-family: sans-serif;
+font-weight: 100;
+border-left:solid 1px;
+border-right: solid 1px;
+border-radius:60px">
+                <!-- Sayac2 -->
+                <h1>AYT Sınavına Kalan Süre</h1>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days" id="day2"></span>
+                        <div class="smalltext">Gün</div>
+                    </div>
+                    <div>
+                        <span class="hours" id="hour2"></span>
+                        <div class="smalltext">Saat</div>
+                    </div>
+                    <div>
+                        <span class="minutes" id="minute2"></span>
+                        <div class="smalltext">Dakika</div>
+                    </div>
+                    <div>
+                        <span class="seconds" id="second2"></span>
+                        <div class="smalltext">Saniye</div>
+                    </div>
+                </div>
+                <p id="demo2"></p>
+            </div>
+            <div class=" col-md-4" style="text-align: center;
+	background: #289b95;
+font-family: sans-serif;
+font-weight: 100;
+border-radius:60px">
+                <!-- Sayac3 -->
+                <h1>LGS Sınavına Kalan Süre</h1>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days" id="day3"></span>
+                        <div class="smalltext">Gün</div>
+                    </div>
+                    <div>
+                        <span class="hours" id="hour3"></span>
+                        <div class="smalltext">Saat</div>
+                    </div>
+                    <div>
+                        <span class="minutes" id="minute3"></span>
+                        <div class="smalltext">Dakika</div>
+                    </div>
+                    <div>
+                        <span class="seconds" id="second3"></span>
+                        <div class="smalltext">Saniye</div>
+                    </div>
+                </div>
+                <p id="demo3"></p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    var deadline1 = new Date("06 15, 2019 10:15:00").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+        var t = deadline1 - now;
+        var days1 = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours1 = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes1 = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds1 = Math.floor((t % (1000 * 60)) / 1000);
+        document.getElementById("day1").innerHTML = days1;
+        document.getElementById("hour1").innerHTML = hours1;
+        document.getElementById("minute1").innerHTML = minutes1;
+        document.getElementById("second1").innerHTML = seconds1;
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("demo1").innerHTML = "SÜRE DOLDU";
+            document.getElementById("day1").innerHTML = '0';
+            document.getElementById("hour1").innerHTML = '0';
+            document.getElementById("minute1").innerHTML = '0';
+            document.getElementById("second1").innerHTML = '0';
+        }
+    }, 1000);
+</script>
+<script>
+
+    var deadline2 = new Date("06 16, 2019 10:15:00").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+        var t = deadline2 - now;
+        var days2 = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours2 = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes2 = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds2 = Math.floor((t % (1000 * 60)) / 1000);
+        document.getElementById("day2").innerHTML = days2;
+        document.getElementById("hour2").innerHTML = hours2;
+        document.getElementById("minute2").innerHTML = minutes2;
+        document.getElementById("second2").innerHTML = seconds2;
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("demo2").innerHTML = "SÜRE DOLDU";
+            document.getElementById("day2").innerHTML = '0';
+            document.getElementById("hour2").innerHTML = '0';
+            document.getElementById("minute2").innerHTML = '0';
+            document.getElementById("second2").innerHTML = '0';
+        }
+    }, 1000);
+</script>
+<script>
+
+    var deadline3 = new Date("06 01, 2019 09:30:00").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+        var t = deadline3 - now;
+        var days3 = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours3 = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes3 = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds3 = Math.floor((t % (1000 * 60)) / 1000);
+        document.getElementById("day3").innerHTML = days3;
+        document.getElementById("hour3").innerHTML = hours3;
+        document.getElementById("minute3").innerHTML = minutes3;
+        document.getElementById("second3").innerHTML = seconds3;
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("demo3").innerHTML = "SÜRE DOLDU";
+            document.getElementById("day3").innerHTML = '0';
+            document.getElementById("hour3").innerHTML = '0';
+            document.getElementById("minute3").innerHTML = '0';
+            document.getElementById("second3").innerHTML = '0';
+        }
+    }, 1000);
+</script>
+
+@{ var timeline = Model.VmPosts.FirstOrDefault(x => x.PostId == 13);
+
+    string timelinetitle = timeline.PostTitle;
+    string timelinecontent = timeline.PostContent;
+}
+<section class="section lb page-section">
+    <div class="container">
+        <div class="section-title row text-center">
+            <div class="col-md-8 offset-md-2">
+                <h3>@timelinetitle</h3>
+                @Html.Raw(timelinecontent)
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="timeline__wrap">
+                <div class="timeline__items">
+
+                    @foreach (var ımage in Model.VmImage.Where(x => x.Type == 4))
+                    {
+                        var post = Model.VmPosts.FirstOrDefault(x => x.ImageId == ımage.ImageId);
+
+                        <div class="timeline__item">
+                            <div class="timeline__content @ımage.Class">
+                                <h2>@post.PostTitle</h2>
+                                @Html.Raw(post.PostContent)
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

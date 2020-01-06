@@ -1,0 +1,98 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>01 | Adana Özel Ders</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Site/images/favicon.ico")" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="@Url.Content("~/Content/Site/images/apple-touch-icon.png")">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/bootstrap.min.css")">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/style.css")">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/versions.css")">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/responsive.css")">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/custom.css")">
+    <!-- Modernizer for Portfolio -->
+    <script src="@Url.Content("~/Content/Site/js/modernizer.js")"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="host_version">
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+    
+    <!-- Start header -->
+        @{Html.RenderAction("CallHeader", "_Layout"); }
+    <!-- End header -->
+    
+    
+        @RenderBody()
+
+    <!--Start Footer-->
+   @{Html.RenderAction("CallFooter", "_Layout"); }
+    <!-- end footer -->
+
+   <!--Copyrights--> 
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">
+                    <p class="footer-company-name">Tüm Hakları Saklıdır. &copy; 2019 <a href="http://umsayazilim.com/" target="_blank">UMSA YAZILIM</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end copyrights -->
+    
+        <!-- Yukarı Çıkma Butonu -->
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- Tüm JavaScript Dosyaları -->
+    @*<script src="@Url.Content("~/Scripts/jquery-3.0.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-3.0.0.js")"></script>*@
+    <script src="@Url.Content("~/Content/Site/js/all.js")"></script>
+   
+    <!-- Tüm Eklentiler -->
+    <script src="~/Content/Site/js/custom.js"></script>
+    <script src="~/Content/Site/js/timeline.min.js"></script>
+   
+    
+    <script>
+            timeline(document.querySelectorAll('.timeline'), {
+                forceVerticalMode: 700,
+                mode: 'horizontal',
+                verticalStartPosition: 'left',
+                visibleItems: 4
+            });
+    </script> 
+
+</body>
+</html>

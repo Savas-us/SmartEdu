@@ -1,0 +1,74 @@
+﻿@using SmartEdu.Models.ORM.Entity
+ @model  İmage
+
+@{
+    ViewBag.Title = "ResimGüncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+@using (Html.BeginForm("ResimDüzenle","AdminPanel",FormMethod.Post))
+{
+    
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4 style="text-align:center; color:black; font-size:32px;"> Resim Güncelleme </h4>
+
+        <hr style="border:1.5px solid; border-radius:1px; color:darkcyan" />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(İmage => İmage.ID)
+
+        <div style="text-align:center">
+            <img src="@Url.Content(Model.ResimYolu)" width=@Html.DisplayFor(m => m.Resimwidth) height=@Html.DisplayFor(m => m.Resimheigth) />
+            
+        </div>
+        <br />
+        <br />
+
+        <div class="form-group">
+            @Html.LabelFor(İmage => İmage.ResimBaslik, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(İmage => İmage.ResimBaslik, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(İmage => İmage.ResimBaslik, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(İmage => İmage.Resimwidth , htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(İmage => İmage.Resimwidth, new { htmlAttributes = new { @class = "form-control" , @readOnly = "readOnly" } })
+                @Html.ValidationMessageFor(İmage => İmage.Resimwidth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(İmage => İmage.Resimheigth, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(İmage => İmage.Resimheigth, new { htmlAttributes = new { @class = "form-control", @readOnly = "readOnly" } })
+                @Html.ValidationMessageFor(İmage => İmage.Resimheigth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(İmage =>İmage.ResimYolu, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(İmage => İmage.ResimYolu, new { htmlAttributes = new { @class = "form-control", @readOnly = "readOnly" } })
+                @Html.ValidationMessageFor(İmage => İmage.ResimYolu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-6">
+                <input type="submit" value="Kaydet" class="btn btn-primary"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <input type="submit" value="Resim Yükle" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn btn-default" style=" font-size:16px; color:black">
+        @Html.ActionLink("Geri Dön", "Resimler")
+    </div>
+}

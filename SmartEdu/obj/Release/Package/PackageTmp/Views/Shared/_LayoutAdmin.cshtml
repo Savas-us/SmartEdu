@@ -1,0 +1,93 @@
+﻿<!doctype html>
+
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="~/Content/Admin/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>01| Admin İçerik Paneli </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Bootstrap core CSS     -->
+    <link href="@Url.Content("~/Content/Admin/css/bootstrap.min.css")" rel="stylesheet" />
+    
+    <!-- Animation library for notifications   -->
+    <link href="@Url.Content("~/Content/Admin/css/animate.min.css")" rel="stylesheet" />
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="@Url.Content("~/Content/Admin/css/light-bootstrap-dashboard.css?v=1.4.0")" rel="stylesheet" />
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="@Url.Content("~/Content/Admin/css/demo.css")" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="@Url.Content("~/Content/Admin/css/pe-icon-7-stroke.css")" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="sidebar" data-image="@Url.Content("~/Content/Admin/img/sidebar-4.jpg")" data-color="orange" style="display:inline-block">
+           
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a class="simple-text" href="/AdminPanel/Index">
+                        01 | Özel Ders Adana
+                    </a>
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a href="/AdminPanel/Yazılar">
+                            <i class="pe-7s-note2"></i>
+                            <p>Yazılar</p>
+                        </a>
+                    </li>
+
+                    <li>
+                         <a href="/AdminPanel/Resimler">
+                            <i class="pe-7s-album"></i>
+                                <p>Resimler</p>
+                         </a>
+                   </li>
+
+                    <li>
+                        <a href="/">
+                            <i class="pe-7s-user"></i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/">
+                            <i class="pe-7s-timer"></i>
+                            <p>Zamanlayıcılar</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <i class="pe-7s-way"></i>
+                            <p>İletişim</p>
+                        </a>
+                    </li>
+
+
+                    <li class="active-pro">
+                        <a href="/Login">
+                            <i class="pe-7s-next-2"></i>
+                            <p style="text-align:center; font-size:17px">ÇIKIŞ YAP</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-background" style="background-image: @Url.Content("~/Content/Admin/img/sidebar-4.jpg") "></div>
+
+        </div>
+
+        <div class="main-panel">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

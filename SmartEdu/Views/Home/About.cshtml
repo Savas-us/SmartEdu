@@ -1,0 +1,64 @@
+﻿@model SmartEdu.Models.ViewModels.AboutModel
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="all-title-box">
+        <center> <img style="background-repeat:no-repeat; width:100%; max-height:100%; padding:10px" src="@Model.VmImage.FirstOrDefault(x=>x.Type ==5).ImagePath" /></center>
+
+    </div>
+@{ 
+
+    string telefon = Model.Telefon.Replace("tel://+9", "");
+
+}
+    <div class="section lb" id="overviews">
+    <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <div class="message-box" div align="center">
+                <a href="@Model.Telefon"  target="_blank" class="hover-btn-new green">
+                    <span>İletişim: @telefon</span>
+                </a>
+            </div>
+        </div>
+        <br />
+
+        <div class="section-title row text-center">
+            <div class="col-md-8 offset-md-2">
+                <h3>@Html.Raw(Model.VmPosts.FirstOrDefault(x=>x.ImageId == null).PostTitle)</h3>
+                <p class="lead">
+                    @Html.Raw(Model.VmPosts.FirstOrDefault(x=>x.ImageId ==null).PostContent)
+                </p>
+            </div>
+        </div><!-- end title -->
+
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="message-box">
+                    <h4></h4>
+                    <h2>@Model.VmPosts.FirstOrDefault(x=>x.ImageId == 8).PostTitle</h2>
+                    
+                        @Html.Raw(Model.VmPosts.FirstOrDefault(x => x.ImageId == 8).PostContent)
+                    
+                   
+                </div><!-- end messagebox -->
+            </div><!-- end col -->
+
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <img class="img-fluid img-rounded" alt="" src="@Url.Content(Model.VmImage.FirstOrDefault(x=>x.Type ==3).ImagePath)">
+                    
+                </div><!-- end media -->
+            </div><!-- end col -->
+        </div>
+
+
+        <!-- end row -->
+    </div><!-- end container -->
+    </div>
+
+ 
+    

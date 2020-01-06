@@ -1,0 +1,59 @@
+﻿@using SmartEdu.Models.ORM.Entity
+@model List<İletisim>
+@{
+    ViewBag.Title = "İletisim";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="header" style="font-size:30px !important; text-align:center; color:darkgoldenrod">
+                <h4 class="title">İLETİŞİM TABLOSU</h4>
+                <p class="category"></p>
+            </div>
+            <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>Düzenle</th>
+                            <th>Telefon</th>
+                            <th>Adres</th>
+                            <th>İnstagram</th>
+                            <th>Twitter</th>
+                            <th>Facebook</th>
+                            <th>Youtube</th>
+                            <th>Whatsapp</th>
+                            <th>Harita</th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var iletisim in Model)
+                         {
+                            <tr>
+                                <td><a class="btn btn-warning" href="/AdminPanel/İletisimGüncelle/@iletisim.ID">Düzenle</a></td>
+                                <td >@iletisim.Telefon</td>
+                                <td>@iletisim.Adres</td>
+                                <td>@iletisim.İnstagram</td>
+                                <td>@iletisim.Twitter</td>
+                                <td>@iletisim.Facebook</td>
+                                <td>@iletisim.Youtube</td>
+                                <td>@iletisim.Whatsapp</td>
+                                <td>@iletisim.Harita</td>
+
+                                
+                            </tr>
+                         }
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

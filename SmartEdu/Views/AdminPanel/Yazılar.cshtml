@@ -1,0 +1,57 @@
+﻿@using SmartEdu.Models.ORM.Entity
+@model List<Post>
+
+@{
+    ViewBag.Title = "Yazılar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<head>
+    <link href="~/Content/Admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/Tables.css" rel="stylesheet" />
+</head>
+
+   
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="header" style="font-size:30px !important; text-align:center; color:darkgoldenrod">
+                <h4 class="title">YAZILAR TABLOSU</h4>
+                <p class="category"></p>
+            </div>
+            <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
+                    <thead >
+                        <tr>
+                            <th>Düzenle</th>
+                            <th>Başlık</th>
+                            <th>İçerik</th>
+                            <th>ResimID</th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var post in Model)
+                        {
+                            <tr>
+                                <td><a class="btn btn-warning" href="/AdminPanel/YazıDüzenle/@post.ID">Düzenle</a></td>
+                                <td>@post.Baslik</td>
+                                <td>@post.İcerik</td>
+                                <td>@post.ResimID</td>
+                                
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+     
+    
+            
+

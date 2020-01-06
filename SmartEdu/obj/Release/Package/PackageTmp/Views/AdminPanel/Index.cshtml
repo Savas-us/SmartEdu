@@ -1,0 +1,211 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<div class="content">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Email Statistics</h4>
+                        <p class="category">Last Campaign Performance</p>
+                    </div>
+                    <div class="content">
+                        <div class="ct-chart ct-perfect-fourth" id="chartPreferences"><svg xmlns="http://www.w3.org/2000/svg" class="ct-chart-pie" style="width: 100%; height: 100%;" width="100%" height="100%" xmlns:ct="http://gionkunz.github.com/chartist-js/ct"><g class="ct-series ct-series-a"><path class="ct-slice-pie" d="M 37.089 196.654 A 101.725 101.725 0 1 0 106.725 20.775 L 106.725 122.5 Z" ct:value="62" /></g><g class="ct-series ct-series-b"><path class="ct-slice-pie" d="M 69.278 27.918 A 101.725 101.725 0 0 0 37.349 196.897 L 106.725 122.5 Z" ct:value="32" /></g><g class="ct-series ct-series-c"><path class="ct-slice-pie" d="M 106.725 20.775 A 101.725 101.725 0 0 0 68.948 28.05 L 106.725 122.5 Z" ct:value="6" /></g><g><text class="ct-label" text-anchor="middle" dx="154.0158" dy="141.2237">62%</text><text class="ct-label" text-anchor="middle" dx="56.7634" dy="112.9693">32%</text><text class="ct-label" text-anchor="middle" dx="97.1943" dy="72.5384">6%</text></g></svg></div>
+                        <div class="footer">
+                            <div class="legend">
+                                <i class="fa fa-circle text-info"></i> Open
+                                <i class="fa fa-circle text-danger"></i> Bounce
+                                <i class="fa fa-circle text-warning"></i> Unsubscribe
+                            </div>
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Users Behavior</h4>
+                        <p class="category">24 Hours performance</p>
+                    </div>
+                    <div class="content">
+                        <div class="ct-chart" id="chartHours"><svg xmlns="http://www.w3.org/2000/svg" class="ct-chart-line" style="width: 100%; height: 245px;" width="100%" height="245px" xmlns:ct="http://gionkunz.github.com/chartist-js/ct"><g class="ct-grids"><line class="ct-grid ct-vertical" x1="50" y1="210" x2="471.9" y2="210" /><line class="ct-grid ct-vertical" x1="50" y1="185.625" x2="471.9" y2="185.625" /><line class="ct-grid ct-vertical" x1="50" y1="161.25" x2="471.9" y2="161.25" /><line class="ct-grid ct-vertical" x1="50" y1="136.875" x2="471.9" y2="136.875" /><line class="ct-grid ct-vertical" x1="50" y1="112.5" x2="471.9" y2="112.5" /><line class="ct-grid ct-vertical" x1="50" y1="88.125" x2="471.9" y2="88.125" /><line class="ct-grid ct-vertical" x1="50" y1="63.75" x2="471.9" y2="63.75" /><line class="ct-grid ct-vertical" x1="50" y1="39.375" x2="471.9" y2="39.375" /><line class="ct-grid ct-vertical" x1="50" y1="15" x2="471.9" y2="15" /></g><g><g class="ct-series ct-series-a"><path class="ct-area" d="M 50 210 L 50 140.044 C 61.719 140.044 73.439 116.156 85.158 116.156 C 96.878 116.156 108.597 90.562 120.317 90.562 C 132.036 90.562 143.756 90.075 155.475 90.075 C 167.194 90.075 178.914 74.962 190.633 74.962 C 202.353 74.962 214.072 67.162 225.792 67.162 C 237.511 67.162 249.231 39.862 260.95 39.862 C 272.669 39.862 284.389 40.594 296.108 40.594 C 307.828 40.594 319.547 26.7 331.267 26.7 C 342.986 26.7 354.706 17.925 366.425 17.925 C 378.144 17.925 389.864 3.788 401.583 3.788 C 413.303 3.788 425.022 -20.1 436.742 -20.1 L 436.742 210 Z" /></g><g class="ct-series ct-series-b"><path class="ct-area" d="M 50 210 L 50 193.669 C 61.719 193.669 73.439 172.95 85.158 172.95 C 96.878 172.95 108.597 175.144 120.317 175.144 C 132.036 175.144 143.756 151.5 155.475 151.5 C 167.194 151.5 178.914 140.044 190.633 140.044 C 202.353 140.044 214.072 128.344 225.792 128.344 C 237.511 128.344 249.231 103.969 260.95 103.969 C 272.669 103.969 284.389 103.481 296.108 103.481 C 307.828 103.481 319.547 78.619 331.267 78.619 C 342.986 78.619 354.706 77.887 366.425 77.887 C 378.144 77.887 389.864 77.4 401.583 77.4 C 413.303 77.4 425.022 52.294 436.742 52.294 L 436.742 210 Z" /></g><g class="ct-series ct-series-c"><path class="ct-area" d="M 50 210 L 50 204.394 C 61.719 204.394 73.439 182.456 85.158 182.456 C 96.878 182.456 108.597 193.669 120.317 193.669 C 132.036 193.669 143.756 183.675 155.475 183.675 C 167.194 183.675 178.914 163.687 190.633 163.687 C 202.353 163.687 214.072 151.744 225.792 151.744 C 237.511 151.744 249.231 135.169 260.95 135.169 C 272.669 135.169 284.389 134.925 296.108 134.925 C 307.828 134.925 319.547 102.994 331.267 102.994 C 342.986 102.994 354.706 110.062 366.425 110.062 C 378.144 110.062 389.864 110.062 401.583 110.062 C 413.303 110.062 425.022 85.931 436.742 85.931 L 436.742 210 Z" /></g></g><g class="ct-labels"><foreignObject style="overflow: visible;" x="50" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">9:00AM</span></foreignObject><foreignObject style="overflow: visible;" x="85.1583" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">12:00AM</span></foreignObject><foreignObject style="overflow: visible;" x="120.317" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">3:00PM</span></foreignObject><foreignObject style="overflow: visible;" x="155.475" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">6:00PM</span></foreignObject><foreignObject style="overflow: visible;" x="190.633" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">9:00PM</span></foreignObject><foreignObject style="overflow: visible;" x="225.792" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">12:00PM</span></foreignObject><foreignObject style="overflow: visible;" x="260.95" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">3:00AM</span></foreignObject><foreignObject style="overflow: visible;" x="296.108" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">6:00AM</span></foreignObject><foreignObject style="overflow: visible;" x="331.267" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/"></span></foreignObject><foreignObject style="overflow: visible;" x="366.425" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/"></span></foreignObject><foreignObject style="overflow: visible;" x="401.583" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/"></span></foreignObject><foreignObject style="overflow: visible;" x="436.742" y="215" width="35.1583" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 35px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/"></span></foreignObject><foreignObject style="overflow: visible;" x="10" y="185.625" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">0</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="161.25" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">100</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="136.875" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">200</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="112.5" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">300</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="88.125" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">400</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="63.75" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">500</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="39.375" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">600</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="15" width="30" height="24.375"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 24px;" xmlns="http://www.w3.org/2000/xmlns/">700</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="-15" width="30" height="30"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/xmlns/">800</span></foreignObject></g></svg></div>
+                        <div class="footer">
+                            <div class="legend">
+                                <i class="fa fa-circle text-info"></i> Open
+                                <i class="fa fa-circle text-danger"></i> Click
+                                <i class="fa fa-circle text-warning"></i> Click Second Time
+                            </div>
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-history"></i> Updated 3 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="header">
+                        <h4 class="title">2014 Sales</h4>
+                        <p class="category">All products including Taxes</p>
+                    </div>
+                    <div class="content">
+                        <div class="ct-chart" id="chartActivity"><svg xmlns="http://www.w3.org/2000/svg" class="ct-chart-bar" style="width: 100%; height: 245px;" width="100%" height="245px" xmlns:ct="http://gionkunz.github.com/chartist-js/ct"><g class="ct-grids"><line class="ct-grid ct-vertical" x1="50" y1="210" x2="335.22" y2="210" /><line class="ct-grid ct-vertical" x1="50" y1="188.333" x2="335.22" y2="188.333" /><line class="ct-grid ct-vertical" x1="50" y1="166.667" x2="335.22" y2="166.667" /><line class="ct-grid ct-vertical" x1="50" y1="145" x2="335.22" y2="145" /><line class="ct-grid ct-vertical" x1="50" y1="123.333" x2="335.22" y2="123.333" /><line class="ct-grid ct-vertical" x1="50" y1="101.667" x2="335.22" y2="101.667" /><line class="ct-grid ct-vertical" x1="50" y1="80" x2="335.22" y2="80" /><line class="ct-grid ct-vertical" x1="50" y1="58.3333" x2="335.22" y2="58.3333" /><line class="ct-grid ct-vertical" x1="50" y1="36.6667" x2="335.22" y2="36.6667" /><line class="ct-grid ct-vertical" x1="50" y1="15" x2="335.22" y2="15" /></g><g><g class="ct-series ct-series-a"><line class="ct-bar" x1="56.8842" y1="210" x2="56.8842" y2="92.5667" ct:value="542" /><line class="ct-bar" x1="80.6525" y1="210" x2="80.6525" y2="114.017" ct:value="443" /><line class="ct-bar" x1="104.421" y1="210" x2="104.421" y2="140.667" ct:value="320" /><line class="ct-bar" x1="128.189" y1="210" x2="128.189" y2="41" ct:value="780" /><line class="ct-bar" x1="151.957" y1="210" x2="151.957" y2="90.1833" ct:value="553" /><line class="ct-bar" x1="175.726" y1="210" x2="175.726" y2="111.85" ct:value="453" /><line class="ct-bar" x1="199.494" y1="210" x2="199.494" y2="139.367" ct:value="326" /><line class="ct-bar" x1="223.262" y1="210" x2="223.262" y2="115.967" ct:value="434" /><line class="ct-bar" x1="247.031" y1="210" x2="247.031" y2="86.9333" ct:value="568" /><line class="ct-bar" x1="270.799" y1="210" x2="270.799" y2="77.8333" ct:value="610" /><line class="ct-bar" x1="294.567" y1="210" x2="294.567" y2="46.2" ct:value="756" /><line class="ct-bar" x1="318.336" y1="210" x2="318.336" y2="16.0833" ct:value="895" /></g><g class="ct-series ct-series-b"><line class="ct-bar" x1="66.8842" y1="210" x2="66.8842" y2="120.733" ct:value="412" /><line class="ct-bar" x1="90.6525" y1="210" x2="90.6525" y2="157.35" ct:value="243" /><line class="ct-bar" x1="114.421" y1="210" x2="114.421" y2="149.333" ct:value="280" /><line class="ct-bar" x1="138.189" y1="210" x2="138.189" y2="84.3333" ct:value="580" /><line class="ct-bar" x1="161.957" y1="210" x2="161.957" y2="111.85" ct:value="453" /><line class="ct-bar" x1="185.726" y1="210" x2="185.726" y2="133.517" ct:value="353" /><line class="ct-bar" x1="209.494" y1="210" x2="209.494" y2="145" ct:value="300" /><line class="ct-bar" x1="233.262" y1="210" x2="233.262" y2="131.133" ct:value="364" /><line class="ct-bar" x1="257.031" y1="210" x2="257.031" y2="130.267" ct:value="368" /><line class="ct-bar" x1="280.799" y1="210" x2="280.799" y2="121.167" ct:value="410" /><line class="ct-bar" x1="304.567" y1="210" x2="304.567" y2="72.2" ct:value="636" /><line class="ct-bar" x1="328.336" y1="210" x2="328.336" y2="59.4167" ct:value="695" /></g></g><g class="ct-labels"><foreignObject style="overflow: visible;" x="50" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Jan</span></foreignObject><foreignObject style="overflow: visible;" x="73.7683" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Feb</span></foreignObject><foreignObject style="overflow: visible;" x="97.5367" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Mar</span></foreignObject><foreignObject style="overflow: visible;" x="121.305" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Apr</span></foreignObject><foreignObject style="overflow: visible;" x="145.073" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Mai</span></foreignObject><foreignObject style="overflow: visible;" x="168.842" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Jun</span></foreignObject><foreignObject style="overflow: visible;" x="192.61" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Jul</span></foreignObject><foreignObject style="overflow: visible;" x="216.378" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Aug</span></foreignObject><foreignObject style="overflow: visible;" x="240.147" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Sep</span></foreignObject><foreignObject style="overflow: visible;" x="263.915" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Oct</span></foreignObject><foreignObject style="overflow: visible;" x="287.683" y="215" width="23.7683" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 24px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Nov</span></foreignObject><foreignObject style="overflow: visible;" x="311.452" y="215" width="30" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 30px; height: 20px;" xmlns="http://www.w3.org/2000/xmlns/">Dec</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="188.333" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">0</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="166.667" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">100</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="145" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">200</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="123.333" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">300</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="101.667" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">400</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="80" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">500</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="58.3333" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">600</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="36.6667" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">700</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="15" width="30" height="21.6667"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 22px;" xmlns="http://www.w3.org/2000/xmlns/">800</span></foreignObject><foreignObject style="overflow: visible;" x="10" y="-15" width="30" height="30"><span class="ct-label ct-vertical ct-start" style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/xmlns/">900</span></foreignObject></g></svg></div>
+                        <div class="footer">
+                            <div class="legend">
+                                <i class="fa fa-circle text-info"></i> Tesla Model S
+                                <i class="fa fa-circle text-danger"></i> BMW 5 Series
+                            </div>
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-check"></i> Data information certified
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="header">
+                        <h4 class="title">Tasks</h4>
+                        <p class="category">Backend development</p>
+                    </div>
+                    <div class="content">
+                        <div class="table-full-width">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox1" type="checkbox">
+                                                <label for="checkbox1"></label>
+                                            </div>
+                                        </td>
+                                        <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                        <td class="td-actions text-right">
+                                            <button title="" class="btn btn-info btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Edit Task">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button title="" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox2" type="checkbox" checked="">
+                                                <label for="checkbox2"></label>
+                                            </div>
+                                        </td>
+                                        <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                        <td class="td-actions text-right">
+                                            <button title="" class="btn btn-info btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Edit Task">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button title="" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox3" type="checkbox">
+                                                <label for="checkbox3"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                        </td>
+                                        <td class="td-actions text-right">
+                                            <button title="" class="btn btn-info btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Edit Task">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button title="" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox4" type="checkbox" checked="">
+                                                <label for="checkbox4"></label>
+                                            </div>
+                                        </td>
+                                        <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                        <td class="td-actions text-right">
+                                            <button title="" class="btn btn-info btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Edit Task">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button title="" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox5" type="checkbox">
+                                                <label for="checkbox5"></label>
+                                            </div>
+                                        </td>
+                                        <td>Read "Following makes Medium better"</td>
+                                        <td class="td-actions text-right">
+                                            <button title="" class="btn btn-info btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Edit Task">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button title="" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox6" type="checkbox" checked="">
+                                                <label for="checkbox6"></label>
+                                            </div>
+                                        </td>
+                                        <td>Unfollow 5 enemies from twitter</td>
+                                        <td class="td-actions text-right">
+                                            <button title="" class="btn btn-info btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Edit Task">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button title="" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" data-original-title="Remove">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-history"></i> Updated 3 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+
+

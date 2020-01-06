@@ -1,0 +1,48 @@
+﻿@using SmartEdu.Models.ORM.Entity
+@model List<İmage>
+
+@{
+    ViewBag.Title = "Resimler";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<link href="~/Content/Admin/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Admin/css/Tables.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <br />
+        <div style="text-align:center; font-size:28px; color:#000000"> Resimler </div>
+     <hr style="border:1.5px solid #561414" />
+
+    <table class="blueTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Resim Başlık</th>
+                <th>Resim Genişliği</th>
+                <th>Resim Yüksekliği</th>
+                <th>Resim Konumu</th>
+                <th>Düzenle</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var image in Model)
+            {
+                <tr>
+                    <td>@image.ID</td>
+                    <td>@image.ResimBaslik</td>
+                    <td>@image.Resimwidth</td>
+                    <td>@image.Resimheigth</td>
+                    <td>@image.ResimYolu</td>
+
+                    <td><a class="btn btn-warning" href="/AdminPanel/ResimDüzenle/@image.ID">Düzenle</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,73 @@
+﻿@using SmartEdu.Models.ORM.Entity
+@model List<Post>
+
+@{
+    ViewBag.Title = "Yazılar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<head>
+    <link href="~/Content/Admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/Tables.css" rel="stylesheet" />
+</head>
+
+   
+  
+        <br />
+         <div style="text-align:center; font-size:28px; color:#000000"> Yazılar </div>
+                <hr style="border:1.5px solid #561414"/>
+                        <table class="blueTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Başlık</th>
+                                    <th>İçerik</th>
+                                    <th>ResimID</th>
+                                    <th>Düzenle</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var post in Model)
+                                  {
+                                    <tr>
+                                        <td>@post.ID</td>
+                                        <td>@post.Baslik</td>
+                                        <td>@post.İcerik</td>
+                                        <td>@post.ResimID</td>
+                                        <td><a class="btn btn-warning" href="/AdminPanel/YazıDüzenle/@post.ID">Düzenle</a></td>
+                                    </tr>
+                                  }
+
+                            </tbody>
+                        </table>
+
+    
+            
+
+    
+@*<table class="blueTable" style="width:auto; height:auto">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>İçerik</th>
+            <th>ResimID</th>
+            <th>Düzenle</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var post in Model)
+            {
+            <tr>
+                <td>@post.ID</td>
+                <td>@post.Baslik</td>
+                <td>@post.İcerik</td>
+                <td>@post.ResimID</td>
+                <td><a class="btn btn-warning" href="/AdminPanel/YazıDüzenle/@post.ID">Düzenle</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>*@
